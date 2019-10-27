@@ -15,15 +15,15 @@ namespace HowToThread
             }
         }
 
-        private static void silnia(int n)
+        private static void Silnia(int s)
         {
             BigInteger wynik = 1;
             WriteLine("Main thread has started. ");
-            for (BigInteger i = 1; i <= n; i++)
+            for (BigInteger i = 1; i <= s; i++)
             {
                 wynik *= i;
             }
-            WriteLine("Main thread has finished its work. ");
+            WriteLine("Main thread has finished its work with following result: " + wynik);
         }
     }
 }

@@ -15,8 +15,7 @@ namespace HowToThread
         {
             n = threadNumber;
         }
-
-        //zrobić konstruktor aby zczytywać numery wątków
+       
         public void Thread1()
         {
             for (int i = 0; i <= 100; i++)
@@ -33,16 +32,16 @@ namespace HowToThread
             }
         }
 
-        public void Silnia(int f)
+        private void Silnia(int f)
         {
             WriteLine($"Thread {n} execution started.");
             BigInteger wynik = 1;
 
-            for (BigInteger i = 1; i <= n; i++)
+            for (BigInteger i = 1; i <= f; i++)
             {
                 wynik *= i;                
             }
-            WriteLine($"Thread {n} has finished its work. ");
+            WriteLine($"Thread {n} has finished its work with following result: {wynik}");
         }
 
         public void ReallyHeavyThread(int d)
