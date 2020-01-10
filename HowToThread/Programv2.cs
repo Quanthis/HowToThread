@@ -23,7 +23,7 @@ namespace HowToThread
             {
                 wynik *= i;
             }
-            WriteLine("Main thread has finished its work with following result: " + wynik);
+            WriteLine("Main thread has finished its work with following result: " );
         }
     }
 }

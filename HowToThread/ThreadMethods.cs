@@ -41,7 +41,7 @@ namespace HowToThread
             {
                 wynik *= i;                
             }
-            WriteLine($"Thread {n} has finished its work with following result: {wynik}");
+            WriteLine($"Thread {n} has finished its work with following result: ");
         }
 
         public void ReallyHeavyThread(int d)

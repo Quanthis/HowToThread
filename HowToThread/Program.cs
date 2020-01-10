@@ -15,18 +15,18 @@ namespace HowToThread
             var t00 = new ThreadMethods(0);
             var t01 = new ThreadMethods(1);
             var t02 = new ThreadMethods(2);
-            var t03 = new ThreadMethods(3);
+            //var t03 = new ThreadMethods(3);
 
-            Thread t1 = new Thread(() => t00.ReallyHeavyThread(100));
-            Thread t2 = new Thread(() => t01.ReallyHeavyThread(100));
-            Thread t3 = new Thread(() => t02.ReallyHeavyThread(100));
-            Thread t4 = new Thread(() => t03.ReallyHeavyThread(100));
+            Thread t1 = new Thread(() => t00.ReallyHeavyThread(100000));
+            Thread t2 = new Thread(() => t01.ReallyHeavyThread(100000));
+            Thread t3 = new Thread(() => t02.ReallyHeavyThread(100000));
+            //Thread t4 = new Thread(() => t03.ReallyHeavyThread(100));
 
             t1.Start();
             t2.Start();
             t3.Start();
-            t4.Start();
-            Silnia(100000);
+            //t4.Start();
+            Silnia(1000000);
 
             /*Thread t2 = new Thread(() => ThreadMethods.staticThread());
 
@@ -40,7 +40,7 @@ namespace HowToThread
             t1.Join();
             t2.Join();
             t3.Join();
-            t4.Join();
+            //t4.Join();
 
             ReadKey();
         }
